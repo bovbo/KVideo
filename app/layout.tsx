@@ -37,7 +37,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
-          <PasswordGate>
+          <PasswordGate hasEnvPassword={!!process.env.ACCESS_PASSWORD}>
             {children}
           </PasswordGate>
           <Analytics />
